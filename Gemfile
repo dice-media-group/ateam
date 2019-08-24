@@ -23,7 +23,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -69,3 +69,11 @@ gem 'omniauth-twitter', '~> 1.4'
 gem 'sidekiq', '~> 5.2', '>= 5.2.5'
 gem 'sitemap_generator', '~> 6.0', '>= 6.0.1'
 gem 'whenever', require: false
+
+## custom gems for this app
+
+# gem 'administrate-field-trix', '~> 0.0.3'
+# gem 'administrate-field-active_storage', '~> 0.1.8'
+# gem 'administrate-field-password', '~> 0.0.4'
+# gem 'administrate-field-lat_lng', '~> 1.9'
+# gem 'administrate-field-boolean_emoji', '~> 0.1.0'

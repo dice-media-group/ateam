@@ -13,6 +13,7 @@ class UserDashboard < Administrate::BaseDashboard
     id: Field::Number,
     email: Field::String,
     password: Field::String.with_options(searchable: false),
+    password_confirmation: Field::String.with_options(searchable: false),
     encrypted_password: Field::String,
     reset_password_token: Field::String,
     reset_password_sent_at: Field::DateTime,
@@ -40,16 +41,16 @@ class UserDashboard < Administrate::BaseDashboard
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
-    :notifications,
-    :services,
     :id,
-    :email,
-    :encrypted_password,
-    :reset_password_token,
-    :reset_password_sent_at,
-    :remember_created_at,
     :first_name,
     :last_name,
+    :notifications,
+    :services,
+    :email,
+    # :encrypted_password,
+    # :reset_password_token,
+    :reset_password_sent_at,
+    :remember_created_at,
     :announcements_last_read_at,
     :admin,
     :created_at,
@@ -60,17 +61,18 @@ class UserDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
+    :first_name,
+    :last_name,
     :password,
+    :password_confirmation,
     :notifications,
     :services,
     :email,
-    :encrypted_password,
-    :reset_password_token,
-    :reset_password_sent_at,
-    :remember_created_at,
-    :first_name,
-    :last_name,
-    :announcements_last_read_at,
+    # :encrypted_password,
+    # :reset_password_token,
+    # :reset_password_sent_at,
+    # :remember_created_at,
+    # :announcements_last_read_at,
     :admin,
   ].freeze
 
