@@ -1,9 +1,42 @@
 <footer class="footer text-muted bg-light">
-  <div class="container">
-    <span>© <%= Date.today.year %> Your Company</span>
-    <ul class="list-inline mb-0 float-right">
-      <li class="list-inline-item mr-3"><%= link_to "Terms", terms_path %></li>
-      <li class="list-inline-item mr-3"><%= link_to "Privacy", privacy_path %></li>
-    </ul>
-  </div>
+	<div class="container">
+		<div class="row">
+			<div class="col footer-nav">
+				<div class="row footer-name">
+					<h2><%= "#{t('company_name')}" %></h2>
+				</div>
+				<div class="row footer-company-description">
+					<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum libero facere perspiciatis expedita nemo, nam vel voluptate voluptatem et accusamus consequatur debitis adipisci fugiat iure nesciunt laborum modi nihil, consequuntur repellat, ex asperiores! Nesciunt maxime suscipit odit dignissimos, minus fugiat, deserunt illo labore in rem ab quaerat porro.						
+					</p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores sint expedita eligendi, non magni eveniet, quo voluptatum unde ipsum nulla corporis, optio necessitatibus ut et laboriosam voluptates officiis totam modi similique ex. Officiis quas ipsam, accusantium similique fugit animi quia est, adipisci perspiciatis, quibusdam placeat. Deleniti, eaque repellat.
+				</div>
+				<div class="row links-and-intro-video">
+					<div class="col footer-links">
+						<%= render partial: 'shared/footer_links' %>
+					</div>
+					<div class="col intro-video">
+						<%= render partial: 'shared/intro_video' %>
+					</div>
+				</div>
+			</div>
+			<div class="col locations">
+				<div class="row">
+				<div class="col loc1">
+					<%= render partial: 'shared/location1' %>
+				</div>
+				<div class="col loc2">
+					<%= render partial: 'shared/location2' %>
+				</div>
+				<div class="col loc3">
+					<%= render partial: 'shared/location3' %>
+				</div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="row copyright">
+			&copy;&nbsp;2019&nbsp;<strong><%= "#{t('company_name')}" %></strong>. All rights reserved.
+		</div>
+	</div>
 </footer>

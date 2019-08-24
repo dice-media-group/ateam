@@ -1,0 +1,20 @@
+
+
+
+<div class="row">
+  <div class="col-sm-6">
+    <h1>Directory of Cities <%= "#{t('company_nickname')}" %> Services</h1>
+  </div>
+
+  <div class="col-sm-6 text-right">
+  <%#= link_to new_served_city_path, class: 'btn btn-primary' do %>
+    <%# (+) Add City %>
+  <%# end %>
+  </div>
+</div>
+
+  <div class="row">
+    <%= render partial: 'shared/served_city', collection: @served_cities %>   
+  </div>
+
+
