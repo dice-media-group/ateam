@@ -1,0 +1,15 @@
+<div class="page-header">
+  <%= link_to served_cities_path, class: 'btn btn-default' do %>
+    All Served_cities
+  <% end %>
+  <%= link_to edit_served_city_path(@served_city), class: 'btn btn-primary' do %>
+    Edit
+  <% end %>
+  <h1>Show served_city</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @served_city.name %></dd>
+
+</dl>

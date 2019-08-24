@@ -84,13 +84,14 @@
 			<h2 class="title"><%= "#{t('company_name')}" %> is proud to be the nation's premier audio visual tech staffing provider for Corporate Events, Conventions, Exhibits, and more. </h2>
 	<h3 id="VTS-service-cities">We service the following cities:</h3>
 	<!-- thes links should be rendered in a css grid -->
-	<%= render partial: 'city_served' %>
-	<%#= render partial: 'city_served', collection: @cities_served %>
+	<%#= render partial: 'city_served' %>
+	<div class="row">
+		<%= render partial: 'served_city', collection: @served_cities %>		
+	</div>
 
 	</div>
 </section>
 
-\
 <section class="company-mission">
 	<%= render partial: 'company_mission' %>
 </section>
