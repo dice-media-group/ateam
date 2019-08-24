@@ -1,2 +1,96 @@
-<h1>Welcome to Jumpstart!</h1>
-<p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+<style>
+	.jumbotron {
+		background-image: url('https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=80');
+	}
+	.cities-served {
+		background-color: #eeeeee;
+	}
+	h4.title {
+		color: #f2b70f;
+	}
+	h4.title .checkmark {
+		color: #000;
+	}
+</style>
+
+<section class="hero">
+	<div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
+      <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
+      <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="main-nav">
+	<div class="nav-heading">
+				<h2 class="title"><p><%= "#{t('company_name')}" %> Provides Nationwide AV Tech Staffing with Headquarters in<br>
+			<a href="/contact-VTS-los-angeles" title="Contact <%= "#{t('company_name')}" %> in Los Angeles">Los Angeles</a>, <a href="/contact-VTS-dallas" title="Contact <%= "#{t('company_name')}" %> in Dallas">Dallas</a>, and <a href="/contact-VTS-orlando" title="Contact <%= "#{t('company_name')}" %> in Orlando">Orlando</a></p>
+		</h2>
+
+	</div>
+
+	<div class="nav-buttons">
+		<div class="row mb-2">
+	    <div class="col-md-3">
+	      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+	        <div class="col p-4 d-flex flex-column position-static">
+	          <strong class="d-inline-block mb-2 text-success">Services</strong>
+	          <p class="card-text mb-auto">VTS is proud to be the #1 nationwide provider of an elite audio visual workforce to staff your corporate events.</p>
+	          <a href="#" class="stretched-link">Continue reading</a>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="col-md-3">
+	      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+	        <div class="col p-4 d-flex flex-column position-static">
+	          <strong class="d-inline-block mb-2 text-success">APPLY NOW</strong>
+
+	          <p class="card-text mb-auto">Are you a highly skilled Audio Visual Technician? If so, we'd love to hear from you.</p>
+	          <a href="#" class="stretched-link">Learn More</a>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="col-md-3">
+	      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+	        <div class="col p-4 d-flex flex-column position-static">
+	          <strong class="d-inline-block mb-2 text-success">Events</strong>
+
+	          <p class="card-text mb-auto">TVTS works with corporate event planners, trade-show planners, and more.</p>
+	          <a href="#" class="stretched-link">Learn More</a>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="col-md-3">
+	      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+	        <div class="col p-4 d-flex flex-column position-static">
+	          <strong class="d-inline-block mb-2 text-success">Opportunities</strong>
+
+	          <p class="mb-auto">VTS is always looking for more nationwide expert, freelance AV technicians.</p>
+	          <a href="#" class="stretched-link">Learn More</a>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+</section>
+
+<section class="cities-served">
+	<a id="main-content"></a>
+
+	<div class="cities-served-heading">
+			<h2 class="title"><%= "#{t('company_name')}" %> is proud to be the nation's premier audio visual tech staffing provider for Corporate Events, Conventions, Exhibits, and more. </h2>
+	<h3 id="VTS-service-cities">We service the following cities:</h3>
+	<!-- thes links should be rendered in a css grid -->
+	<%= render partial: 'city_served' %>
+	<%#= render partial: 'city_served', collection: @cities_served %>
+
+	</div>
+</section>
+
+\
+<section class="company-mission">
+	<%= render partial: 'company_mission' %>
+</section>
