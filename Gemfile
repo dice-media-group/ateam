@@ -69,3 +69,10 @@ gem 'omniauth-twitter', '~> 1.4'
 gem 'sidekiq', '~> 5.2', '>= 5.2.5'
 gem 'sitemap_generator', '~> 6.0', '>= 6.0.1'
 gem 'whenever', require: false
+
+## custom gems for this app
+# gem 'administrate-field-trix', '~> 0.0.3'
+# gem 'administrate-field-active_storage', '~> 0.1.8'
+# gem 'administrate-field-password', '~> 0.0.4'
+# gem 'administrate-field-lat_lng', '~> 1.9'
+# gem 'administrate-field-boolean_emoji', '~> 0.1.0'
