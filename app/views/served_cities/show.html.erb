@@ -11,5 +11,15 @@
 <dl class="dl-horizontal">
   <dt>Name:</dt>
   <dd><%= @served_city.name %></dd>
-
 </dl>
+<dl>
+  
+<dl class="dl-horizontal">
+  <dt>Hero Image:</dt>
+  <% if @served_city.hero_image.present? %>
+    <%= image_tag @served_city.hero_image.variant(resize_to_limit: [100, 100]) %>
+  <% else %>
+    <%= image_tag "https://picsum.photos/id/237/200/300" %>
+  <% end -%>
+</dl>
+<dl>
