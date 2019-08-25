@@ -20,6 +20,6 @@ class ServedCitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def served_city_params
-      params.require(:served_city).permit(:name, :body)
+      params.require(:served_city).permit(:name, :body, :hero_image)
     end
 end

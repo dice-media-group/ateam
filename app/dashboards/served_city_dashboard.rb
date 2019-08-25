@@ -8,11 +8,12 @@ class ServedCityDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    id: Field::Number,
-    name: Field::String,
-    created_at: Field::DateTime,
-    updated_at: Field::DateTime,
-    body: RichTextAreaField,
+    id:           Field::Number,
+    name:         Field::String,
+    created_at:   Field::DateTime,
+    updated_at:   Field::DateTime,
+    body:         RichTextAreaField,
+    hero_image:   Field::ActiveStorage,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -35,6 +36,7 @@ class ServedCityDashboard < Administrate::BaseDashboard
     :created_at,
     :updated_at,
     :body,
+    :hero_image,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -43,6 +45,7 @@ class ServedCityDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :name,
     :body,
+    :hero_image,
   ].freeze
 
   # Overwrite this method to customize how served cities are displayed

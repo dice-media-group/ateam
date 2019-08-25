@@ -73,3 +73,4 @@ gem 'whenever', require: false
 ## custom gems for this app
 # active_storage for production on Heroku
 gem "aws-sdk-s3", require: false
+gem 'administrate-field-active_storage', '~> 0.1.8'
