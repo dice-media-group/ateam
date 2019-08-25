@@ -10,7 +10,7 @@ amazon:
   service: S3
   access_key_id: <%= Rails.application.credentials.dig(:aws_access_key_id) %>
   secret_access_key: <%= Rails.application.credentials.dig(:aws_secret_access_key) %>
-  region: us-west-2
+  region: us-west-1
   bucket: dmg-team
 
 # Remember not to checkin your GCS keyfile to a repository
